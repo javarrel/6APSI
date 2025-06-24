@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './LoginPage.css';
 
-function LoginPage() {
- 
+function LoginPage({ onLogin }) {
   return (
-    <div>
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
-       
-      /><br />
-      <input
-        type="password"
-        placeholder="Password"
-     
-      /><br />
-      <button >Login</button>
+    <div className="login-page">
+      <div className="login-box">
+        <h2>🏳️‍🌈 Login</h2>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button onClick={onLogin}>Login</button>
+      </div>
     </div>
   );
 }
